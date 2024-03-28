@@ -3,21 +3,19 @@ import logo from './logo.svg';
 import './App.css';
 import User from './User';
 
+let myText = 'Web'
 function App() {
-  const [users, setUsers] = useState("Sam");
-  function updateData(){
-    return(
-      setUsers("Smith")
-    )
-  }
   return (
-    <div className="App">
-      <header className="App-header">
-      <h1>{users}</h1>
-      <button onClick={updateData}>Update User</button>
-      <User />
-      </header>
-    </div>
+  <div>
+    <h1 style={{backgroundColor:"#ff1284"}}>Hello {myText} World</h1>
+    <p>Thi is a tutorial  for React.</p>
+    <label htmlFor='name'>Name: </label>
+    <input maxLength={5} autoFocus={true} placeholder='Name'></input>
+    <User firstName= "Sam" age= "30" class="B"></User>
+    <User firstName= "Smith" age= "25" class="C"/>
+    <User firstName= "Swan" age= "20" class="A"/>
+  </div>
+  
   );
 }
 

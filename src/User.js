@@ -13,11 +13,24 @@
 
 //////////// functional Component
 
-function User(){
-    //JSX => using html syntax  in javascript
-    return( 
-        <h1> This is a function Component and we gonna use this one most of the time</h1>
-    );
-}
+// function User(){
+//     //JSX (Javascript Syntax Extension)=> using html syntax  in javascript
+//     return( 
+//         <h1> This is a function Component and we gonna use this one most of the time</h1>
+//     );
+// }
 
+// export default User;
+
+////////////////////////
+
+const User = (props) =>{
+    return(
+        <>
+        <h1>{props.firstName}</h1>
+        <h2>Age: {props.age} </h2>
+        <h4>Class: {props.class}</h4>
+        </>
+    )
+}
 export default User;
